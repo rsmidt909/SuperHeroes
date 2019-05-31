@@ -20,7 +20,7 @@ namespace SuperHeroes.Controllers
         public ActionResult Index()
         {
             
-            return View();
+            return View(db.SuperHero.ToList());
         }
 
         // GET: Hero/Details/5
