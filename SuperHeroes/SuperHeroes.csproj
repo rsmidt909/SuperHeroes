@@ -178,6 +178,10 @@
     <Compile Include="Migrations\201905311607512_InitialMigraton.Designer.cs">
       <DependentUpon>201905311607512_InitialMigraton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905311647282_Second migration.cs" />
+    <Compile Include="Migrations\201905311647282_Second migration.Designer.cs">
+      <DependentUpon>201905311647282_Second migration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Hero.cs" />
@@ -243,6 +247,9 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Hero\Create.cshtml" />
+    <Content Include="Views\Hero\Details.cshtml" />
+    <Content Include="Views\Hero\Edit.cshtml" />
+    <Content Include="Views\Hero\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -263,6 +270,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201905311607512_InitialMigraton.resx">
       <DependentUpon>201905311607512_InitialMigraton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905311647282_Second migration.resx">
+      <DependentUpon>201905311647282_Second migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity.Infrastructure;
 
 namespace SuperHeroes.Controllers
 {
@@ -18,13 +19,15 @@ namespace SuperHeroes.Controllers
         // GET: Hero
         public ActionResult Index()
         {
+            
             return View();
         }
 
         // GET: Hero/Details/5
         public ActionResult Details(int id)
-        {
-            return View();
+        {           
+            Hero hero = db.SuperHero.Find(id);
+            return View(hero);
         }
 
         // GET: Hero/Create
@@ -54,16 +57,19 @@ namespace SuperHeroes.Controllers
         // GET: Hero/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Hero hero = db.SuperHero.Find(id);
+            return View(hero);
         }
 
         // POST: Hero/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Hero hero)
         {
             try
             {
                 // TODO: Add update logic here
+                db.Entry(hero).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
 
                 return RedirectToAction("Index");
             }
@@ -76,17 +82,20 @@ namespace SuperHeroes.Controllers
         // GET: Hero/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Hero hero = db.SuperHero.Find(id);
+            return View(hero);
         }
 
         // POST: Hero/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
         {
             try
             {
                 // TODO: Add delete logic here
-
+                Hero hero = db.SuperHero.Find(id);
+                db.SuperHero.Remove(hero);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch

@@ -105,3 +105,4 @@ C:\Users\rsmid\Desktop\dev\c#\SuperHeroes\SuperHeroes\obj\Debug\SuperHeroes.dll
 C:\Users\rsmid\Desktop\dev\c#\SuperHeroes\SuperHeroes\obj\Debug\SuperHeroes.pdb
 C:\Users\rsmid\Desktop\dev\c#\SuperHeroes\SuperHeroes\obj\Debug\SuperHeroes.Migrations.InitialMigraton.resources
 C:\Users\rsmid\Desktop\dev\c#\SuperHeroes\SuperHeroes\obj\Debug\SuperHeroes.csproj.GenerateResource.cache
+C:\Users\rsmid\Desktop\dev\c#\SuperHeroes\SuperHeroes\obj\Debug\SuperHeroes.Migrations.Secondmigration.resources
